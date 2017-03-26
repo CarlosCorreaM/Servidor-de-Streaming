@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Emitir video</title>
+    <script src="https://use.fontawesome.com/0b16d1e9ae.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+</head>
+<body class="grey darken-4 white-text">
+    
+    <nav>
+        <div class="nav-wrapper red darken-4">
+            <a style="padding-left: 1em " href="#" class="brand-logo"> <i class="fa fa-television"></i> LiveStream</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="active"><a href="">Transmitir <i class="fa fa-podcast"></i></a></li>
+                <li><a href="visualizar.html">visualizar <i class="fa fa-eye"></i></a></li>
+                <li><a href="index.html">Salir <i class="fa fa-sign-out"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <center>
+        <video id="video" src="" style="width: 680px;height: 320px;" autoplay></video>
+    </center>
+    <br>
+    <div class="row">
+        <div style="height: 5em" class="col l6 s12 light-blue darken-4">
+            <p><i class="fa fa-spinner fa-pulse  fa-fw"></i>
+            <span class="sr-only">Loading...</span> <strong>Estado:</strong> Emitiendo</p>
+        </div>
+        <div style="height: 5em" class="col l6 s12 yellow accent-2 black-text">
+            <p><strong><i class="fa fa-warning"></i> Mensajes:</strong> <span id="logger"></span></p>
+        </div>
+    </div>
+
+    <canvas style="display: none"  id="preview"></canvas>
+
+    <footer class="page-footer red darken-4">
+        <div class="footer-copyright">
+            <div class="container">
+            © 2017 Correa Mandujano José Carlos | 1802
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer> 
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+    
+</body>
+</html>
